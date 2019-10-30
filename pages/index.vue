@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <section class="section has-background-info">
-    <div>
+    <section class="section has-background-info" style="justify-content: center;align-items: center;text-align: center;">
       <logo />
       <h1 class="title">
         Yasshieeee's Typing Game
@@ -10,9 +8,7 @@
         created by Yasshieeee
       </h2>
       <button class="button is-primary is-large"><nuxt-link to="/main">Let's Start!</nuxt-link></button>
-    </div>
     </section>
-  </div>
 </template>
 
 <script>

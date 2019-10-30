@@ -1,13 +1,13 @@
 <template>
-    <div class="container">
-        <keymap />
-        <section class="section has-background-primary">
+<div>
+        <section class="section has-background-black has-text-info" style="justify-content: center;align-items: center;text-align: center;">
+          <keymap />
         {{ lastLetter }}
         <p>{{ words }}</p>
         <p>{{ key }}</p>
-        <input class="input" v-model="userInput" v-on:keyup.enter="pushEnter">
+        <input class="input has-text-info has-background-black" style="width:300px;" v-model="userInput" v-on:keyup.enter="pushEnter">
         </section>
-    </div>
+</div>
 </template>
 <script>
 import keymap from '~/layouts/keymap.vue'
@@ -55,8 +55,8 @@ export default {
       lastLetter: function(val,oldVal){
           $('#key'+val).css({
                 "background-color": "#e74c3c",
-                "animation": "bg-color 1s",
-                "-webkit-animation":"bg-color 1s"
+                "animation": "bg-color 0.5s",
+                "-webkit-animation":"bg-color 0.5s"
             })
         setTimeout(function reset(){
             $('#key'+val).css({
@@ -64,7 +64,7 @@ export default {
                 "animation": "",
                 "-webkit-animation":""
             })
-        }, 1000);
+        }, 500);
       }
     },
     methods:{
@@ -87,17 +87,52 @@ export default {
 }
 </script>
 <style>
+body{
+  width:100%;
+  height:100%;
+}
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
+
 @-webkit-keyframes bg-color {
   0% { background-color: #FF0000; }
-  10% { background-color: #FF0461; }
-  20% { background-color: #FF1A6F; }
-  30% { background-color: #FF367F; }
-  40% { background-color: #FF5192; }
-  50% { background-color: #FF69A3; }
-  60% { background-color: #FF82B2; }
-  70% { background-color: #FF97C2; }
-  80% { background-color: #FFABCE; }
-  90% { background-color: #FFBEDA; }
-  100% { background-color: #FFD5EC; }
+  10% { background-color: #EE0000; }
+  20% { background-color: #DD0000; }
+  30% { background-color: #CC0000; }
+  40% { background-color: #BB0000; }
+  50% { background-color: #AA0000; }
+  60% { background-color: #990000; }
+  70% { background-color: #770000; }
+  80% { background-color: #550000; }
+  90% { background-color: #330000; }
+  100% { background-color: #110000; }
 }
 </style>

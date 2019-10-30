@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
-        <table class="table is-bordered">
+<div>
+    <section class="section has-background-black">
+        <table class="table is-bordered has-background-black has-text-info" style="width:100%;height:auto;">
             <tr>
                 <td id="key1">1</td>
                 <td id="key2">2</td>
@@ -64,7 +65,8 @@
                 <td colSpan="2" id="keyShift2">Shift</td>
             </tr>
         </table>
-    </div>
+        </section>
+</div>
 </template>
 <script>
 export default {
@@ -75,6 +77,36 @@ export default {
 }
 </script>
 <style>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
 td{
     min-width:20px;
     min-height:20px;
